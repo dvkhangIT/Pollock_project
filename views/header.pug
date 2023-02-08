@@ -1,0 +1,19 @@
+header.header 
+    img.header-shapes(srcSet ="./images/bg-shapes.png", alt="shapes")
+    a.header-scroll(href="#services")
+        .header-scroll-inner
+            img(src="./images/icon-arrow-down.svg", alt="scroll")
+    nav.header-nav 
+        .container.header-nav-container 
+            a.logo(href="#") 
+                img( alt="image", srcSet="./images/logo.png")
+                span Pollock
+            ul.menu     
+                each val in['Home','Service','Abount','Pages','Blog','Contact']
+                    li.menu-item 
+                        a.menu-link(href="#")= val
+            .tools 
+                img(src="./images/icon-search.svg", alt="search")
+                img(src="./images/icon-bag.svg", alt="cart")
+                button.button-signup.button Sign Up
+    include ./hero
